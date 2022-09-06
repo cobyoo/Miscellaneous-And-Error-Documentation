@@ -37,7 +37,8 @@
        
        
     2. 경고 메시지 :  Service 'SparkUI' could not bind on port 4040. Attemption port 4041.
-       원인 : Default로 기본 포트는 4040으로 시작하며 4041이 뜨는 이유는 spark-shell 실행 중이면 1증가로 4041포트로 접근하겠다는 경고임.
+       원인 : Default로 기본 포트는 4040으로 시작하며 4041이 뜨는 이유는 
+              spark-shell 실행 중이면 1증가로 4041포트로 접근하겠다는 경고임.
        해결 : 에러가 발생한 것이 아니기 때문에 신경을 안써도 됨.
        
        
