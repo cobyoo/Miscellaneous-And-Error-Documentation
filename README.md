@@ -13,7 +13,7 @@
     
       
     2. 원인 1 : master에서 namenode 및 datanode가 실행이 안 될 경우
-       원인 2 : namenode가 알고있는 namenode id와 datanode가 알고있는 namenode id가 서로 달라서 에러가 뜨는 것임.
+       원인 2 : namenode 알고있는 namenode id와 datanode 알고있는 namenode id가 서로 달라서 에러가 뜨는 것임.
        해결 : namenode format이 namenode, datanode가 실행되지 않을 때만 해야됨.
       
       
