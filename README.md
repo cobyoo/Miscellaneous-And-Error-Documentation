@@ -6,6 +6,7 @@
 
 
 ## Hadoop 설치시 발생하는 오류 해결
+
     1. master에서 active standby 변경할 시 backup에서 바꾸는 경우에는 backup에서 namenode를 삭제하고, 
        다시 master에서 hdfs haadmin -getAllServiceState를 입력하고 다시 backup에서 namenode를 실행하면 해결됨.
     
@@ -29,6 +30,7 @@
 
 
 ## spark-shell 실행시 발생할 수 있는 경고 
+
     1. 경고 메시지 :  Failed to created SparkJLineReader
        원인 : spark-shell을 실행시키는 user의 홈 디렉토리에 Permission denied의 경우 접근 권한이 없는 경우 발생함.
        해결 : spark-shell user 홈 디렉토리 chmod로 권한 추가함
