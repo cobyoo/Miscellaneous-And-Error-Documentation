@@ -14,7 +14,7 @@
     2. master에서 namenode format은 namenode, datanode가 실행되지 않을 때만 해야 되며,
        datanode가 실행되지 않는 경우 datanode에서 다른 2개의 datanode 프로세스들은 실행이 되는 반면,
        1개의datanode 프로세스가 실행이 안된다. 
-       대부분 namenode가 알고 있는 namenode id와 datanode가 알고 있는 namenode id가 서로 달라서 에러가 뜨는 것임.
+       대부분 namenode가 알고있는 namenode id와 datanode가 알고있는 namenode id가 서로 달라서 에러가 뜨는 것임.
       
       
     3. 갑자기 namenode가 동작하지 않을 경우에는 hadoop-namenode-master.log를 보면 됨.
