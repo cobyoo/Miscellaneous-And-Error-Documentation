@@ -33,6 +33,7 @@
        원인 : spark-shell을 실행시키는 user의 홈 디렉토리에 Permission denied의 경우 접근 권한이 없는 경우 발생함.
        해결 : spark-shell user 홈 디렉토리 chmod로 권한 추가함
        
+       
     2. 경고 메시지 :  Service 'SparkUI' could not bind on port 4040. Attemption port 4041.
        원인 : Default로 기본 포트는 4040으로 시작하며 4041이 뜨는 이유는 spark-shell 실행 중이면 1증가로 4041포트로 접근하겠다는 경고임.
        해결 : 에러가 발생한 것이 아니기 때문에 신경을 안써도 됨.
