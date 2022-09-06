@@ -1,5 +1,9 @@
 # Error-Cleanup-Documentation
 
+## Index
+- [Hadoop 설치 시 발생하는 오류 해결](#Hadoop-설치-시-발생하는-오류-해결)
+
+
 ## Hadoop 설치시 발생하는 오류 해결
     1. master에서 active standby 변경할 시 backup에서 바꾸는 경우에는 backup에서 namenode를 삭제하고, 
        다시 master에서 hdfs haadmin -getAllServiceState를 입력하고 다시 backup에서 namenode를 실행하면 해결됨.
