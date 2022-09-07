@@ -43,10 +43,10 @@
 
 
 ## Yarn 관리하는 Memory 설정
-    1. yarn.nodemanager.resource.cpu-vcores
-    2. yarn.nodemanager.resource.memory-mb
-    3. yarn.scheduler.minimum-allocation-mb
-    4. yarn.scheduler.maximum-allocation-mb
+### 1. yarn.nodemanager.resource.cpu-vcores
+### 2. yarn.nodemanager.resource.memory-mb
+### 3. yarn.scheduler.minimum-allocation-mb
+### 4. yarn.scheduler.maximum-allocation-mb
     
-- [1. yarn.nodemanager.resource.cpu-vcores](#1.-yarn.nodemanager.resource.cpu-vcores)  
+
        
