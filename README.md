@@ -53,6 +53,7 @@
    ### 3. yarn.scheduler.minimum-allocation-mb
    ### 4. yarn.scheduler.maximum-allocation-mb
     
+    
 ## Terminal 디렉토리 및 파일 색상 변경
     export LS_COLORS="di=00;36:fi=00;37" 입력 후 source ~/.bashrc 해서 적용시키면 해결함. 
        
