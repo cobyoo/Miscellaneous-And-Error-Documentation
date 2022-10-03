@@ -4,7 +4,7 @@
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
 - [spark-shell 실행시 발생할 수 있는 경고](#spark-shell-실행시-발생할-수-있는-경고)
 - [Yarn 관리하는 Memory 설정](#Yarn-관리하는-Memory-설정)     
-- [Cassandra 설정](#Cassandra-설정)    
+- [Cassandra 설정시 발생하는 오류 해결](#Cassandra-설정시-발생하는-오류-해결)    
 - [Terminal 디렉토리 및 파일 색상 변경](#Terminal-디렉토리-및-파일-색상-변경)  
 
 ## Hadoop 설치시 발생하는 오류 해결
@@ -54,7 +54,7 @@
     3. yarn.scheduler.minimum-allocation-mb
     4. yarn.scheduler.maximum-allocation-mb
     
-## Yarn 관리하는 Memory 설정
+## Cassandra 설정시 발생하는 오류 해결
     
     1. 경고 메시지 : Failed to connect to '127.0.0.1:7199': Connection refused (Connection refused)
        원인 : cassandra.yaml 구성 파일 오류 
