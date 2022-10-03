@@ -30,7 +30,6 @@
        해결 : 어떠한 방법을 해도 nn1이 active가 안되면 hdfs zkfc -formatZK을 입력하면 해결됨.
        
     5. 원인 : hdfs dfsadmin -report not working
-    
        해결 : systemctl stop firewalld 방화벽을 해제 시 문제해결 
 
 
