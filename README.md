@@ -73,5 +73,5 @@
        
 ## MySQL 명령어
     에러 : Data truncated for column
-    원인 : data insert시 Data truncated for column 에러가 발생 한다면 데이터의 일부분이 잘렸을 때 나오는 메세지로 컬럼 자료형의 범위를 초과 하였을 때 발생함. 
+    원인 : 데이터의 일부분이 잘렸을 때 나오는 메세지로 컬럼 자료형의 범위를 초과 하였을 때 발생함. 
     해결 : DATE_FORMAT(sysdate(),'%Y%m%d')
