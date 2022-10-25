@@ -6,6 +6,8 @@
 - [Yarn 관리하는 Memory 설정](#Yarn-관리하는-Memory-설정)     
 - [Cassandra 설정시 발생하는 오류 해결](#Cassandra-설정시-발생하는-오류-해결)    
 - [Terminal 디렉토리 및 파일 색상 변경](#Terminal-디렉토리-및-파일-색상-변경)  
+- [Ubuntu Server 사용중인 특정포트 종료](#Ubuntu-Server-사용중인-특정포트-종료)
+
 
 ## Hadoop 설치시 발생하는 오류 해결
 
@@ -63,4 +65,9 @@
     
 ## Terminal 디렉토리 및 파일 색상 변경
     export LS_COLORS="di=00;36:fi=00;37" 입력 후 source ~/.bashrc 해서 적용시키면 해결함. 
+    
+## Ubuntu Server 사용중인 노드 및 특정포트 종료
+    sudo lsof -i :특정포트
+    sudo kill -9 [프로세스ID]
+    killall node 노드 서버 모두 종료 
        
