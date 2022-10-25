@@ -7,7 +7,7 @@
 - [Cassandra 설정시 발생하는 오류 해결](#Cassandra-설정시-발생하는-오류-해결)    
 - [Terminal 디렉토리 및 파일 색상 변경](#Terminal-디렉토리-및-파일-색상-변경)  
 - [Ubuntu Server 사용중인 노드 및 특정포트 종료](#Ubuntu-Server-사용중인-노드-및-특정포트-종료)
-
+- [MySQL 명령어](#MySQL-명령어)
 
 ## Hadoop 설치시 발생하는 오류 해결
 
@@ -71,3 +71,7 @@
     sudo kill -9 [프로세스ID]
     killall node 노드 서버 모두 종료 
        
+## MySQL 명령어
+    에러 : Data truncated for column
+    원인 : data insert시 Data truncated for column 에러가 발생 한다면 데이터의 일부분이 잘렸을 때 나오는 메세지로 컬럼 자료형의 범위를 초과 하였을 때 발생함. 
+    해결 : DATE_FORMAT(sysdate(),'%Y%m%d')
