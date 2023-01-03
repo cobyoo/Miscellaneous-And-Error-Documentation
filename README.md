@@ -1,4 +1,4 @@
-# Miscell# Miscellaneous And Error Documentationaneous And Error Documentation
+# Miscellaneous And Error Documentation
 
 ## Index
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
