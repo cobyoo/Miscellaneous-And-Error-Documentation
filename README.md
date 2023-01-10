@@ -8,6 +8,7 @@
 - [Terminal 디렉토리 및 파일 색상 변경](#Terminal-디렉토리-및-파일-색상-변경)  
 - [Ubuntu Server 사용중인 노드 및 특정포트 종료](#Ubuntu-Server-사용중인-노드-및-특정포트-종료)
 - [MySQL 명령어](#MySQL-명령어)
+- [기타](#기타)
 
 ## Hadoop 설치시 발생하는 오류 해결
 
@@ -75,3 +76,11 @@
     에러 : Data truncated for column
     원인 : 데이터의 일부분이 잘렸을 때 나오는 메세지로 컬럼 자료형의 범위를 초과 하였을 때 발생함. 
     해결 : DATE_FORMAT(sysdate(),'%Y%m%d')
+
+## 기타 
+    1. ubuntu server (sshd server active) 
+       Since it is private, ssh server is disabled by default.
+       ssh server 설치 명령어 : sudo apt install open-server 
+       ssh 서버 시작 명령어 : 
+                             1. sudo systemctl enable sshd 
+                             2. sudo systemctl restart sshd 
