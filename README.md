@@ -82,5 +82,5 @@
        Since it is private, ssh server is disabled by default.
        ssh server 설치 명령어 : sudo apt install open-server 
        ssh 서버 시작 명령어 : 
-                             1. sudo systemctl enable sshd 
-                             2. sudo systemctl restart sshd 
+                             - sudo systemctl enable sshd 
+                             - sudo systemctl restart sshd 
