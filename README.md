@@ -80,7 +80,7 @@
 ## 기타 
     1. ubuntu server (sshd server active) 
        Since it is private, ssh server is disabled by default.
-       ssh server 설치 명령어 : sudo apt install open-server 
+       ssh server 설치 명령어 : sudo apt install openssh-server 
        ssh 서버 시작 명령어 : 
                              - sudo systemctl enable sshd 
                              - sudo systemctl restart sshd 
