@@ -84,3 +84,4 @@
        ssh 서버 시작 명령어 : 
                              - sudo systemctl enable sshd 
                              - sudo systemctl restart sshd 
+                             - sudo systemctl restart sshd 
