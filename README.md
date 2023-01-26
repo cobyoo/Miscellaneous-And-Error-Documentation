@@ -12,6 +12,7 @@
 - [spark-shell 실행시 발생할 수 있는 경고](#spark-shell-실행시-발생할-수-있는-경고)
 - [Cassandra 설정시 발생하는 오류 해결](#Cassandra-설정시-발생하는-오류-해결)   
 - [Ignite Off-Heap Memory 부족 해결](#Ignite-Off-Heap-Memory-부족-해결)
+- [Ignite Java Heap Space 부족 해결](#Ignite-JAVA-Heap-Space-부족-해결)
 
 ## Hadoop 설치시 발생하는 오류 해결
 
@@ -87,4 +88,33 @@
        ssh 서버 시작 명령어 : 
                              - sudo systemctl enable sshd 
                              - sudo systemctl restart sshd 
-                        
+
+## Ignite Off-Heap Memory 부족 해결
+    원인 : Ignite 서버에서 start시 사용하는 Config용 XML파일에서 설정들을 로그 정보에서 제시해 준 3가지 방법으로 해결 
+    해결 : 
+            1. DataRegionConfiguration 설정 중 maxSize값을 늘려주면 해결 
+            
+            2. DataRegionConfiguration 설정 중 persistenceEnabled값을 추가해주면 해결 
+               <property name="defaultDataRegionConfiguration">
+                    <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+                        <!-- 10 GB initial size. -->
+                        <property name="initialSize" value="#{10L * 1024 * 1024 * 1024}"/>
+                        <!-- 50 GB maximum size. -->
+                        <property name="maxSize" value="#{50L * 1024 * 1024 * 1024}"/>
+                        <property name="persistenceEnabled" value="true"/>
+                        <!-- Increasing the buffer size to 1 GB. -->
+                        <property name="checkpointPageBufferSize" value="#{1024L * 1024 * 1024}"/>
+                    </bean>
+               </property>
+                    
+            3. eviction 또는 expiration 정책을 설정 
+               - eviction : 공간이 필요할 때 데이터를 특정 알고리즘에 따라 지우는 설정
+               - expiration : 특정 기간 이후의 데이터를 지우는 설정
+
+## Ignite Off-Heap Memory 부족 해결
+    원인 : Ignite 서버에 과도한 요청이나 일정 범위를 벗어나는 데이터 요청이 들어오는 경우 Ignite에서 발생하는 에러 
+    해결 : JVM 할당 메모리를 늘려주면 당장은 해결되지만, 리소스를 무한정 늘릴 수만은 없으니 서버 리소스 맞게 변경
+           Ignite.sh 파일을 열어 JVM_OPTS 값을 변경
+           
+           vi Ignite.sh 
+           JVM_OPTS="-Xms4g -Xmx8g -server -XX:MaxMetaspaceSize=4G" 서버 리소스에 맞게 할당하는 용량 늘려줌
