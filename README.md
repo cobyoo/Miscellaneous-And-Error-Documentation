@@ -80,7 +80,7 @@
     원인 : 데이터의 일부분이 잘렸을 때 나오는 메세지로 컬럼 자료형의 범위를 초과 하였을 때 발생함. 
     해결 : DATE_FORMAT(sysdate(),'%Y%m%d')
 
-## 기타 
+## Ubuntu Server 설정  
     1. ubuntu server (sshd server active) 
        Since it is private, ssh server is disabled by default.
        ssh server 설치 명령어 : sudo apt install openssh-server 
