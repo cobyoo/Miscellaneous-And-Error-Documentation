@@ -7,6 +7,8 @@
 - [Ubuntu Server 사용중인 노드 및 특정포트 종료](#Ubuntu-Server-사용중인-노드-및-특정포트-종료)
 - [MySQL 명령어](#MySQL-명령어)
 - [Ubuntu Server 설정](#Ubuntu-Server-설정)
+- [Java 실행 Option](#Java-실행-Option)
+
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
 - [spark-shell 실행시 발생할 수 있는 경고](#spark-shell-실행시-발생할-수-있는-경고)
@@ -82,10 +84,10 @@
     해결 : DATE_FORMAT(sysdate(),'%Y%m%d')
 
 ## Ubuntu Server 설정  
-    1. ubuntu server (sshd server active) 
-       Since it is private, ssh server is disabled by default.
-       ssh server 설치 명령어 : sudo apt install openssh-server 
-       ssh 서버 시작 명령어 : 
+    - ubuntu server (sshd server active) 
+      Since it is private, ssh server is disabled by default.
+      ssh server 설치 명령어 : sudo apt install openssh-server 
+      ssh 서버 시작 명령어 : 
                              - sudo systemctl enable sshd 
                              - sudo systemctl restart sshd 
 
@@ -118,3 +120,19 @@
            
            vi Ignite.sh 
            JVM_OPTS="-Xms4g -Xmx8g -server -XX:MaxMetaspaceSize=4G" 서버 리소스에 맞게 할당하는 용량 늘려줌
+           
+## Java 실행 Option
+    1. -X Option 
+       -Xms: 초기 Heap size 설정
+       -Xmx: 최대 Heap size 설정
+       -Xss: 각 Thread에 할당되는 Stack size 설정
+       -Xmn: New 영역을 위한 Heap size 설정 
+    
+    2. -XX Option
+       -XX:PermSize: 초기 Permanent size 설정
+       -XX:MaxPerSize: 최대 Permanent size 설정 
+       
+    3. Heap Size 구하기 
+       long heapSize = Runtime.getRuntime().totalMemory();
+       String haepSizeMB = (heapSize / (1024*1024)) + "MB";
+       
