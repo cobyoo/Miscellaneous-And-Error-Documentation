@@ -111,7 +111,7 @@
                - eviction : 공간이 필요할 때 데이터를 특정 알고리즘에 따라 지우는 설정
                - expiration : 특정 기간 이후의 데이터를 지우는 설정
 
-## Ignite Off-Heap Memory 부족 해결
+## Ignite Java Heap Space 부족 해결
     원인 : Ignite 서버에 과도한 요청이나 일정 범위를 벗어나는 데이터 요청이 들어오는 경우 Ignite에서 발생하는 에러 
     해결 : JVM 할당 메모리를 늘려주면 당장은 해결되지만, 리소스를 무한정 늘릴 수만은 없으니 서버 리소스 맞게 변경
            Ignite.sh 파일을 열어 JVM_OPTS 값을 변경
