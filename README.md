@@ -2,15 +2,15 @@
 
 ## Index
 ### Miscellaneous
-- [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
-- [spark-shell 실행시 발생할 수 있는 경고](#spark-shell-실행시-발생할-수-있는-경고)
-- [Yarn 관리하는 Memory 설정](#Yarn-관리하는-Memory-설정)     
-- [Cassandra 설정시 발생하는 오류 해결](#Cassandra-설정시-발생하는-오류-해결)    
+- [Yarn 관리하는 Memory 설정](#Yarn-관리하는-Memory-설정)      
 - [Terminal 디렉토리 및 파일 색상 변경](#Terminal-디렉토리-및-파일-색상-변경)  
 - [Ubuntu Server 사용중인 노드 및 특정포트 종료](#Ubuntu-Server-사용중인-노드-및-특정포트-종료)
 - [MySQL 명령어](#MySQL-명령어)
 - [기타](#기타)
 ### Error Documentation 
+- [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
+- [spark-shell 실행시 발생할 수 있는 경고](#spark-shell-실행시-발생할-수-있는-경고)
+- [Cassandra 설정시 발생하는 오류 해결](#Cassandra-설정시-발생하는-오류-해결)   
 
 ## Hadoop 설치시 발생하는 오류 해결
 
