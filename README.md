@@ -8,6 +8,7 @@
 - [MySQL 명령어](#MySQL-명령어)
 - [Ubuntu Server 설정](#Ubuntu-Server-설정)
 - [Java 실행 Option](#Java-실행-Option)
+- [JVM Memory 영역에 대한 설명](JVM-Memory-영역에-대한-설명)
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -135,4 +136,11 @@
     3. Heap Size 구하기 
        long heapSize = Runtime.getRuntime().totalMemory();
        String haepSizeMB = (heapSize / (1024*1024)) + "MB";
+       
+## JVM Memory 영역에 대한 설명 
+    - Method Area : 메소드와 클래스 변수를 저장하기 위한 공간, 모든 프로그램에 의해 공유
+    - Heap Area : 사용자가 생성하는 Java Object들이 저장되는 공간, 동적으로 할당하여 사용되어짐
+    - Stack Area : 메소드 호출시 해당 메소드의 매개변수, 지역변수, 임시변수 등을 저장하기 위한 Stack 구조의 메모리
+    - Native Haep Area : Java Object가 아닌 Native Object들이 거주하는 공간, OS 차원에서 결정
+    - Permanent Space : Class에 대한 Meta 정보를 저장하는 공간(Java Heap의 하위 영역)
        
