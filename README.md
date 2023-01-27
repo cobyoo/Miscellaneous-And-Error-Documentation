@@ -2,7 +2,7 @@
 
 ## Index
 ### Miscellaneous
-- [Yarn 관리하는 Memory 설정](#Yarn-관리하는-Memory-설정)      
+- [Spark Configurations Yarn](#Spark-Configurations-Yarn)      
 - [Terminal 디렉토리 및 파일 색상 변경](#Terminal-디렉토리-및-파일-색상-변경)  
 - [Ubuntu Server 사용중인 노드 및 특정포트 종료](#Ubuntu-Server-사용중인-노드-및-특정포트-종료)
 - [MySQL 명령어](#MySQL-명령어)
@@ -57,12 +57,21 @@
        해결 : 에러가 발생한 것이 아니기 때문에 신경을 안써도 됨.
 
 
-## Yarn 관리하는 Memory 설정
+## Spark Configurations Yarn 
 
-    1. yarn.nodemanager.resource.cpu-vcores
-    2. yarn.nodemanager.resource.memory-mb
-    3. yarn.scheduler.minimum-allocation-mb
-    4. yarn.scheduler.maximum-allocation-mb
+    1. spark.yarn.am.(cores/memory) - Client Mode 
+        - AM 코어/메모리 수 (Client Mode에서는 Spark Driver가 Yarn Cluster에서 수행되지 않음)
+        - spark.driver.cores/memory - Cluster Mode
+    2. spark.yarn.max.executor.failures
+        - 애플리케이션 Fail을 결정짓는 Executor Fail 수 (기본 값: numExecutors * 2, minimum 3)
+    3. spark.executor.instances (컨테이너 수)
+        - Static allocation에서 Executor의 수 (기본 값 2)
+        - spark.dynamicAllocation.enabled에서는 이 값을 초기값으로 할당 후 동적으로 증가
+    4. spark.executor.cores (컨테이너 내 스레드 수)
+        - Executor에 할당할 코어 수 (기본 값 Yarn: 1, Standalone/Mesos: 사용 가능한 전체 코어 수)
+    5. spark.yarn.(executor/driver/am).memoryOverhead
+        - Executor당 할당할 off-heap 메모리 크기
+        - executorMemory * 0.10 (minimum 384MB)
     
 ## Cassandra 설정시 발생하는 오류 해결
     
