@@ -8,7 +8,8 @@
 - [MySQL 명령어](#MySQL-명령어)
 - [Ubuntu Server 설정](#Ubuntu-Server-설정)
 - [Java 실행 Option](#Java-실행-Option)
-- [JVM Memory 영역에 대한 설명](JVM-Memory-영역에-대한-설명)
+- [JVM Memory 영역에 대한 설명](#JVM-Memory-영역에-대한-설명)
+- [VSCode Git 연동](#VSCode-Git-연동)
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -153,3 +154,15 @@
     - Native Haep Area : Java Object가 아닌 Native Object들이 거주하는 공간, OS 차원에서 결정
     - Permanent Space : Class에 대한 Meta 정보를 저장하는 공간(Java Heap의 하위 영역)
        
+## VSCode Git 연동
+    - 1. git --version 
+    - 2. git init
+    - 3. git 레퍼지토리 생성 후 레퍼지토리 주소를 복사 
+    - 4. git remote add origin '복사한 주소'
+    - 5. git add .
+    - 6. git commit -m '메세지'
+    - 7. git push origin master 
+    
+    - 레퍼지토리를 private로 설정하셨다면, Github의 아이디와 비밀번호를 확인하는 창이 나옴 
+    - 아이디와 비밀번호를 입력하면 로그인 됨 
+    - 8. Github에서 파일 확인 
