@@ -10,6 +10,7 @@
 - [Java 실행 Option](#Java-실행-Option)
 - [JVM Memory 영역에 대한 설명](#JVM-Memory-영역에-대한-설명)
 - [VSCode Git 연동](#VSCode-Git-연동)
+- [Spark 실행 명령어](#Spark-실행-명령어) 
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -166,3 +167,9 @@
     - 레퍼지토리를 private로 설정하셨다면, Github의 아이디와 비밀번호를 확인하는 창이 나옴 
     - 아이디와 비밀번호를 입력하면 로그인 됨 
     - 8. Github에서 파일 확인 
+    
+## Spark 실행 명령어
+    - 1. 경로 : /spark/sbin 
+    - 2. 실행 명령어 : 
+            ./start-master.sh (마스터 노드 실행)
+            ./start-workers.sh (워커 노드 실행)
