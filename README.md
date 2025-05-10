@@ -13,6 +13,7 @@
 - [Spark 실행 명령어](#Spark-실행-명령어) 
 - [Spark에서 local file 로드 방법](#Spark에서-local-file-로드-방법)
 - [10G 해당 네트워크 인터페이스의 속도를 설정하는 데 문제가 발생 해결](#10G-해당-네트워크-인터페이스의-속도를-설정하는-데-문제가-발생-해결)
+- [Spark Iceberg Minio](#Spark-Iceberg-Minio)
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -193,3 +194,6 @@
     - 또한, 다음과 같이 autoneg를 먼저 끄고 속도를 설정.
     - sudo ethtool -s enp26s0f1 autoneg off
     - sudo ethtool -s enp26s0f1 speed 10000 duplex full
+
+## Spark Iceberg Minio
+    - ![Image](https://github.com/user-attachments/assets/7f1cf0d1-a063-4c4c-8c34-0231af0c9a34)
