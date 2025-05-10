@@ -15,6 +15,7 @@
 - [10G 해당 네트워크 인터페이스의 속도를 설정하는 데 문제가 발생 해결](#10G-해당-네트워크-인터페이스의-속도를-설정하는-데-문제가-발생-해결)
 - [Spark Iceberg Minio](#Spark-Iceberg-Minio)
 - [Tmux 명령어](#Tmux-명령어)
+- [MLOps Pipeline Document](#MLOps-Pipeline-Document)
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -196,14 +197,139 @@
     - sudo ethtool -s enp26s0f1 autoneg off
     - sudo ethtool -s enp26s0f1 speed 10000 duplex full
 
+## Spark Iceberg Minio
+![Image](https://github.com/user-attachments/assets/7f1cf0d1-a063-4c4c-8c34-0231af0c9a34)
+![Image](https://github.com/user-attachments/assets/1e724bbd-dd88-4b3b-9cd6-56ae8a749eab)
+![Image](https://github.com/user-attachments/assets/b368dc68-5a6d-4676-a951-3b9317251e21)
+
 ## Tmux-명령어
     - tmux ls 
     - tmux attach -t cloud-datahub
     - Ctrl + b 방향키 - 이동 
     - Ctrl + b + d 세션 나가기 ( detach )
 
+## MLOps Pipeline Document
+        
+    1. MLOps Pipeline Structure 
+    
+    Pipeline for Continuous Deployment and Automation of Machine Learning Models.
+![Image](https://github.com/user-attachments/assets/e6d8fe77-2293-4a0f-87d9-f689c386b564)
 
-## Spark Iceberg Minio
-![Image](https://github.com/user-attachments/assets/7f1cf0d1-a063-4c4c-8c34-0231af0c9a34)
-![Image](https://github.com/user-attachments/assets/1e724bbd-dd88-4b3b-9cd6-56ae8a749eab)
-![Image](https://github.com/user-attachments/assets/b368dc68-5a6d-4676-a951-3b9317251e21)
+    Platform Description
+    
+    Apache Kafka - ⁠Apache Kafka
+    
+    What is Apache Kafka? 
+    Answer Apache Kafka is an open-source distributed streaming platform.
+    It is designed for building real-time data pipelines and streaming applications, offering high throughput, fault-tolerance and horizontal scalability.
+    Kafka is widely utilized for various use cases including real-time analytics, log aggregation, and event-driven architectures.
+    
+    
+    Apache JenkinsWhat is Apache Jenkins?
+    AnswerApache Jenkins is an open-source automation server for continuous integration and continuous delivery(CI/CD).
+    It automates the software development process, enabling developers to test and deploy code changes rapidly.
+    Jenkins boasts a rich plugin ecosystem, allowing seamless integration with various development environments and tools. 
+    
+    
+    MLFlow What is MLFlow?
+    Answer MLFlow is an open-source platform for managing the end-to-end machine learning lifecycle.
+    It provides tools for tracking experiments, packaging code into reproducible runs, and sharing and deloying models.
+    MLFlow supports various machine learning libraries and frameworks, promoting collaboration and reproducibility in ML projects. 
+    
+    
+    Git LabWhat is Git Lab?
+    Answer GitLab is a comprehensive DevOps platform that provides source code collaboration, CI/CD, issue tracking, and code review on a single platform.
+    With flexible deployment options and integrated security features, GitLab simplifies and strengthens the software development prcess.
+    
+    
+    Delta Lake What is Delta Lake?
+    Answer Delta Lake is an open-source storage layer that brings reliability to data lakes.
+    It provides ACID transactions, schema enforcement, and time travel capabilities on top of existing data lakes. 
+    Delta Lake enables data engineering and data science teams to build robust and scalable data pipelines with ease.
+
+    2. How to use it 
+    
+    First, the AI engineer writes the code to train the AI model.
+    The written code is git push/ git pull to GitLab.
+    
+<img width="991" alt="Image" src="https://github.com/user-attachments/assets/b5b30d26-b06d-475d-b3f0-a1f6599da9a3" />   
+
+    This is the configuration screen in Jenkins for connecting to GitLab.
+
+<img width="1489" alt="Image" src="https://github.com/user-attachments/assets/1caf62de-db9d-41e6-94cc-2c7f4e98403b" />
+
+    Create the project in Jenkins and pipeline it with Git Lab.
+    Select 'Build when a change is pushed to Git' under Build Triggers.
+
+![Image](https://github.com/user-attachments/assets/ecf29aba-eb3c-4b73-ac97-93aad14d6d4d)
+
+![Image](https://github.com/user-attachments/assets/000240a2-81a4-4886-9331-2d640cc491d7)
+
+    - Below is an example of setting up a Jenkins pipeline using a Jenkinsfile.
+    
+    pipeline {
+        agent any
+        
+        stages {
+            stage('Install dependencies') {
+                steps {
+                    script {
+                        // Install necessary Python dependencies
+                        sh 'pip install mlflow torch transformers pandas sqlalchemy psycopg2'
+                    }
+                }
+            }
+            
+            stage('MLflow run') {
+                steps {
+                    script {
+                        // Run MLflow project
+                        sh '/usr/bin/python3 model.py'
+                    }
+                }
+            }
+        }
+        
+        post {
+            success {
+                echo 'Build completed successfully.'
+            }
+            failure {
+                echo 'Build failed!'
+            }
+        }
+    }
+
+    
+    This pipeline script performs the following actions.
+    
+    Install dependencies : Install necessary Python dependencies using pip.
+    MLFlow run : Executes the MLFlow project by running the 'model.py' script.
+    Post-build actions : 
+    
+    'success' : Displays a message if the build completes successfully.
+    'failure' : Displays a message if the build fails.
+
+    
+    Jenkins Status Screen - ⁠⁠⁠Jenkins LinksWhen a build is executed, the final result appears as follows.
+    You can perform builds via Jenkinsfile stored in GitLab and manage versions with MLflow
+
+![Image](https://github.com/user-attachments/assets/7d4d2ea1-17be-4732-9ae2-e3fcd479ccf1)
+
+    Jenkins Build Screen - Success Screen
+
+![Image](https://github.com/user-attachments/assets/c86db319-8296-469d-b675-8211d7bd28b9)
+
+![Image](https://github.com/user-attachments/assets/2d05309d-2a26-406c-afd7-c20706e83f8b)
+    
+    MLflow Tracking - UIInformation such as Run Command, Duration, Parameters, Metrics, Server, etc., can be viewed.
+
+<img width="1502" alt="Image" src="https://github.com/user-attachments/assets/eac7208c-c29a-40e1-9412-e26f0f62b823" />
+
+    
+    3. Data Stored in Delta Lake
+    
+    View in Jupyter Notebook - Data Stored in Delta Lake 
+
+<img width="1502" alt="Image" src="https://github.com/user-attachments/assets/60a80f00-b5dd-4a86-822c-ef525b68ea3e" />
+
