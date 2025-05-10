@@ -196,4 +196,4 @@
     - sudo ethtool -s enp26s0f1 speed 10000 duplex full
 
 ## Spark Iceberg Minio
-    - ![Image](https://github.com/user-attachments/assets/7f1cf0d1-a063-4c4c-8c34-0231af0c9a34)
+    ![Image](https://github.com/user-attachments/assets/7f1cf0d1-a063-4c4c-8c34-0231af0c9a34)
