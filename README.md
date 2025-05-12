@@ -314,10 +314,6 @@
     Jenkins Status Screen - ⁠⁠⁠Jenkins LinksWhen a build is executed, the final result appears as follows.
     You can perform builds via Jenkinsfile stored in GitLab and manage versions with MLflow
 
-![Image](https://github.com/user-attachments/assets/7d4d2ea1-17be-4732-9ae2-e3fcd479ccf1)
-
-    Jenkins Build Screen - Success Screen
-
 ![Image](https://github.com/user-attachments/assets/c86db319-8296-469d-b675-8211d7bd28b9)
 
 ![Image](https://github.com/user-attachments/assets/2d05309d-2a26-406c-afd7-c20706e83f8b)
