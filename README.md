@@ -16,6 +16,7 @@
 - [Spark Iceberg Minio](#Spark-Iceberg-Minio)
 - [Tmux 명령어](#Tmux-명령어)
 - [MLOps Pipeline Document](#MLOps-Pipeline-Document)
+- [Pinecone](#Pinecone)
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -328,4 +329,13 @@
     View in Jupyter Notebook - Data Stored in Delta Lake 
 
 <img width="1502" alt="Image" src="https://github.com/user-attachments/assets/60a80f00-b5dd-4a86-822c-ef525b68ea3e" />
+
+## Pinecone
+    Billing 
+![Image](https://github.com/user-attachments/assets/c7954a84-3a53-427d-bcc2-c489c745c02c)
+
+    Index
+![Image](https://github.com/user-attachments/assets/a6816315-530f-4e19-afa2-c669072886a8)
+![Image](https://github.com/user-attachments/assets/74d326a6-7ebe-4d07-9ec1-0362dae5df8e)
+    
 
