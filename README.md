@@ -17,6 +17,7 @@
 - [Tmux 명령어](#Tmux-명령어)
 - [MLOps Pipeline Document](#MLOps-Pipeline-Document)
 - [Pinecone](#Pinecone)
+- [Cyberduck](#Cyberduck)
 
 ### Error Documentation 
 - [Hadoop 설치시 발생하는 오류 해결](#Hadoop-설치시-발생하는-오류-해결)
@@ -337,5 +338,28 @@
     Index
 ![Image](https://github.com/user-attachments/assets/a6816315-530f-4e19-afa2-c669072886a8)
 ![Image](https://github.com/user-attachments/assets/74d326a6-7ebe-4d07-9ec1-0362dae5df8e)
+
+## Cyberduck
+    Warning Cyberduck Version : 8.7.1
+
+    First, open the Cyberduck App and click the + button at the bottom or the new connection button at the top.
+
+![Image](https://github.com/user-attachments/assets/3d3d9db2-ed33-46f5-9195-df6233f5c90a)
+
+    Then the screen will look like the one above. Click on the top, and a list of tasks will appear. Click "more options" and type "https" in the search box.
+
+![Image](https://github.com/user-attachments/assets/2d0687ae-a5cf-4ccd-b5c4-64f2f6ac85b7)
     
+    Check the S3 (HTTPS) option as shown in the screen above, then select S3 (HTTPS) from the home screen. 
+
+![Image](https://github.com/user-attachments/assets/dd6d1a1b-5016-44b7-b695-fb282fc830e6)
+
+![Image](https://github.com/user-attachments/assets/af5d1f9d-50af-447c-9955-c20def1ab8ef)
+
+    And if you visit cloud/datahub/buckets you can check the information in your own bucket.
+
+    If you enter the access key and secret key on the Endpoint Host information and Bucket Name, Key management page as shown above, you can access the Bucket.
+    And you can upload the data by dragging and dropping it.
+
+![Image](https://github.com/user-attachments/assets/e7d50ef1-4234-43b5-8e68-c0fc621fdb88)
 
